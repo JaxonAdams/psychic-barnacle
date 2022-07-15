@@ -17,18 +17,25 @@ namespace Jaxon.BadgeMaker
 
             while(true)
             {
-                Console.WriteLine("Please enter a name: (leave empty to exit)");
+                Console.WriteLine("Enter first name: (leave empty to exit)");
                 Console.WriteLine("---------------------");
-
                 string newName = Console.ReadLine();
-                Console.WriteLine("---------------------");
 
                 if (newName == "") 
                 {
                     break;
                 }
 
-                Employee currentEmployee = new Employee(newName, "Smith");
+                Console.WriteLine("Enter last name: ");
+                string lastName = Console.ReadLine();
+                Console.WriteLine("Enter Employee ID: ");
+                int id = Int32.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Photo URL: ");
+                string photoUrl = Console.ReadLine();
+
+                Console.WriteLine("---------------------");
+
+                Employee currentEmployee = new Employee(newName, lastName, id, photoUrl);
                 employees.Add(currentEmployee);
             };
 
@@ -38,10 +45,11 @@ namespace Jaxon.BadgeMaker
         static void PrintEmployees(List<Employee> employees)
         {
             Console.WriteLine("---------------------");
-            for (int i = 0; i < employees.Count; i++)
+            for (int i = 0; i < employees.Count; i++) 
             {
-                Console.WriteLine(employees[i].GetName());
-            };
+            string template = "{0,-10}\t{1,-20}\t{2}";
+            Console.WriteLine(String.Format(template, employees[i].GetId(), employees[i].GetName(), employees[i].GetPhotoUrl()));
+            }
         }
     }
 }
