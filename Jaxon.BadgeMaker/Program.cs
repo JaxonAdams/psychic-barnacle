@@ -7,15 +7,36 @@ namespace Jaxon.BadgeMaker
     {
         static void Main(string[] args)
         {
-            List<string> employees = new List<string> ()
+            List<string> employees = GetEmployees();
+            PrintEmployees(employees);
+        }
+
+        static List<string> GetEmployees()
+        {
+            List<string> employees = new List<string> ();
+
+            while(true)
             {
-                "Jaxon",
-                "Paige"
+                Console.WriteLine("Please enter a name: (leave empty to exit)");
+                Console.WriteLine("---------------------");
+
+                string newName = Console.ReadLine();
+                Console.WriteLine("---------------------");
+
+                if (newName == "") 
+                {
+                    break;
+                }
+
+                employees.Add(newName);
             };
 
-            employees.Add("Brea");
-            employees.Add("Graham");
+            return employees;
+        }
 
+        static void PrintEmployees(List<string> employees)
+        {
+            Console.WriteLine("---------------------");
             for (int i = 0; i < employees.Count; i++)
             {
                 Console.WriteLine(employees[i]);
