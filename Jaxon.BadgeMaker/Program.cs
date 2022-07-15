@@ -7,13 +7,13 @@ namespace Jaxon.BadgeMaker
     {
         static void Main(string[] args)
         {
-            List<string> employees = GetEmployees();
+            List<Employee> employees = GetEmployees();
             PrintEmployees(employees);
         }
 
-        static List<string> GetEmployees()
+        static List<Employee> GetEmployees()
         {
-            List<string> employees = new List<string> ();
+            List<Employee> employees = new List<Employee> ();
 
             while(true)
             {
@@ -28,18 +28,19 @@ namespace Jaxon.BadgeMaker
                     break;
                 }
 
-                employees.Add(newName);
+                Employee currentEmployee = new Employee(newName, "Smith");
+                employees.Add(currentEmployee);
             };
 
             return employees;
         }
 
-        static void PrintEmployees(List<string> employees)
+        static void PrintEmployees(List<Employee> employees)
         {
             Console.WriteLine("---------------------");
             for (int i = 0; i < employees.Count; i++)
             {
-                Console.WriteLine(employees[i]);
+                Console.WriteLine(employees[i].GetName());
             };
         }
     }
