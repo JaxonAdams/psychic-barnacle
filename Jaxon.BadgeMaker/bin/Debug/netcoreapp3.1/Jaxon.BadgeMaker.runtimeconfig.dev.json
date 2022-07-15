@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\jadam\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\jadam\\.nuget\\packages"
+    ]
+  }
+}
