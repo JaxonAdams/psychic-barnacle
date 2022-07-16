@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "llF21UoMEIbBLunqqEYQQnv0OF0ySWCS8R/IMpPfuK2NngasUrQ1frHeZg0Cq9cnQybcohtNTPXxjtaDldqucw==",
+  "dgSpecHash": "wiSaEsPJbDa8SRlu/aPMrhXDslX312ADzqiuduN1KZ8WcpP8iw5zQm24N5/Tk7ggTp86WX1nWUkoo11/rj8ItQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\jadam\\OneDrive\\Desktop\\C#\\psychic-barnacle\\Jaxon.BadgeMaker\\Jaxon.BadgeMaker.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jadam\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\jadam\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

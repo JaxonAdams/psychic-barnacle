@@ -29,5 +29,10 @@ namespace Jaxon.BadgeMaker
         {
             return PhotoUrl;
         }
+
+        public string GetCompanyName()
+        {
+            return "Company, Inc.";
+        }
     }
 }
